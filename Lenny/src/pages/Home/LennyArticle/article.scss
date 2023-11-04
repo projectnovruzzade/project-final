@@ -1,0 +1,131 @@
+// ! Article Lenny SCSS
+@import "../../../assets/common-style/common.scss";
+
+.articlePage {
+    padding: 100px 60px;
+
+    @media (max-width: $sm) {
+        padding: 70px 40px;
+    }
+
+    @media (max-width: 410px) {
+        padding: 60px 15px;
+    }
+    
+
+    .wrapper {
+
+        width: 85%;
+        margin: 0 auto;
+
+        @media (max-width: 1300px) {
+            width: 100%;
+        }
+
+        .section-heading-part {
+            display: flex;
+            width: 100%;
+            margin-bottom: 50px;
+            align-items: center;
+            justify-content: space-between;
+
+            .section-title {
+                font-family: font-bold;
+                font-size: 30px;
+                letter-spacing: 0.5px;
+
+                @media (max-width: $md) {
+                    font-size: 27px;
+                }
+
+                @media (max-width: $sm) {
+                    font-size: 24px;
+                }
+    
+            }
+
+            .view-detail {
+                padding: 10px 15px;
+                border-radius: 8px;
+                border: 2px solid $color-green;
+
+                @media (max-width: $md) {
+                    padding: 8px 12px;
+                    font-size: 14px;
+                }
+    
+
+                a {
+                    color: $color-green;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .box-group {
+            display: grid;
+            gap: 10px;
+            justify-content: center;
+            grid-template-columns: repeat(3,330px);
+
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(3,290px);
+            }
+
+            @media (max-width: $lg) {
+                grid-template-columns: repeat(2,290px);
+                row-gap: 30px;
+            }
+
+            @media (max-width: $md) {
+                justify-content: space-between;
+            }
+
+            @media (max-width: 650px) {
+                grid-template-columns: repeat(1,280px);
+                justify-content: center;
+            }
+
+            @media (max-width: 410px) {
+                grid-template-columns: repeat(1, 240px);
+                place-items: center;
+            }
+            
+
+           .box {
+                .heading-part {
+                    border-radius: 8px;
+                    margin-bottom: 7px;
+                }
+
+                .main-part {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    text-align: left;
+                    width: 85%;
+                    gap: 7px;
+
+                    .box-date {
+                        color: $color-green;
+                        font-size: 14px;
+                        font-family: font-regular;   
+                    }
+
+                    .box-title {
+                        font-size: 16px;
+                        font-family: font-medium;
+                        letter-spacing: 0.5px;
+                    }
+
+                    .box-description {
+                        font-size: 14px;
+                        color: $color-grey--2;
+                        line-height: 22px;
+                        font-family: font-regular
+                    }
+                }
+            }
+        }
+    }
+}

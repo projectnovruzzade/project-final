@@ -1,0 +1,198 @@
+// ! Large ABOUT SCSS
+@import "../../../assets/common-style/common.scss";
+
+.large-about-part {
+
+    margin-top: 50px;
+    border-bottom: 1px solid $color-grey;
+    padding-bottom: 30px;
+
+    @media (max-width: $sm) {
+        padding: 0 15px;
+    }
+
+    .heading-part {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        // padding-bottom: 5px;
+        border-bottom: 1px solid $color-grey;
+
+        @media (max-width: 390px) {
+            display: grid;
+            overflow-x: scroll;
+            grid-template-columns: repeat(4, 110px);
+        }
+
+        .heading-text {
+            padding: 0px 14px;
+            height: 30px;
+            cursor: pointer;
+            display: inline-block;
+            // background: #000;
+            text-align: center;
+            color: $color-grey--2;
+
+            @media (max-width: $lg) {
+                font-size: 15px;
+            }
+
+            @media (max-width: 575px) {
+                font-size: 14px;
+                padding: 0 10px;
+            }
+
+            @media (max-width: 460px) {
+                font-size: 13px;
+                padding: 0 6px;
+            }
+
+
+            &.active {
+                color: $color-green;
+                border-bottom: 2px solid $color-green;
+            }
+        }
+    }
+
+    .product-detail-main {
+
+        margin-top: 20px;
+
+        .product-title-desc {
+            width: 55%;
+            margin-bottom: 30px;
+
+            @media (max-width: $md) {
+                width: 90%;
+            }
+
+            .product-title {
+                font-size: 26px;
+                margin-bottom: 10px;
+                color: $color-black;
+                font-family: font-bold;
+
+                @media (max-width: $lg) {
+                    font-size: 23px;
+                }
+
+                @media (max-width: $sm) {
+                    font-size: 20px;
+                }
+            }
+
+            .product-description {
+                font-family: font-regular;
+                font-size: 14px;
+                line-height: 22px;
+                color: $color-grey--2;
+
+                @media (max-width: $lg) {
+                    font-size: 13px;
+                }
+
+            }
+        }
+
+    }
+
+    .adds-content {
+        display: grid;
+        grid-template-columns: 33% 33% 24%;
+        align-items: center;
+        gap: 50px;
+
+        @media (max-width: $md) {
+            grid-template-columns: 70%;
+        }
+
+        @media (max-width: $sm) {
+            grid-template-columns: 90%;
+        }
+
+        .content-title {
+            margin-bottom: 10px;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+
+            @media (max-width: $lg) {
+                font-size: 17px;
+            }
+
+            @media (max-width: $sm) {
+                font-size: 16px;
+            }
+        }
+
+        .wrapper-content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .content {
+                display: flex;
+                align-items: center;
+                padding: 9px 8px;
+                width: 100%;
+                // background: #f9f9f9;
+                margin-bottom: 5px;
+
+                &:nth-child(odd) {
+                    background-color: $color-grey--3;
+                }
+
+                .common-text {
+                    flex: 1;
+                    font-size: 15px;
+                    font-family: font-regular;
+                    color: $color-grey--2;
+
+                    @media (max-width: $lg) {
+                        font-size: 14px;
+                    }
+                }
+
+                .data-text {
+                    flex: 2;
+                    font-size: 15px;
+                    padding-left: 20px;
+
+                    @media (max-width: $lg) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .box-about {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .element {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                @media (max-width: $lg) {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .box-system {
+            .content-title {
+                margin-bottom: 20px;
+            }
+
+            li {
+                list-style-type: none;
+                color: $color-grey--2;
+                font-family: font-regular;
+                font-size: 15px;
+                line-height: 27px;
+            }
+        }
+    }
+}

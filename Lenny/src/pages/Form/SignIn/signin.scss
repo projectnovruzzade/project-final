@@ -1,0 +1,158 @@
+@import "../../../assets/common-style/common.scss";
+
+@mixin btn {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+    cursor: pointer;
+    color: #fff;
+    border: none;   
+    transition: .4s ease all;
+    padding: 12px 0;
+    background-color: $color-green;
+    border-radius: 8px;
+}
+
+.signIn-content {
+    position: relative;
+    z-index: 99;
+    min-width: 280px;
+    font-family: font-medium;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+
+    @media (max-width: 1024px) {
+        width: 350px;
+        padding: 20px;
+    }
+
+    @media (max-width: $sm) {
+        width: 75%;
+        padding: 20px 20px 0 20px;
+    }
+
+    .content-title {
+        font-size: 20px;
+        font-family: font-bold;
+        margin-bottom: 30px;
+        color: $color-black;
+    }
+
+    .form-part {
+
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+
+        .input-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            width: 96%;
+
+            label {
+                font-size: 15px;
+                margin-bottom: 2px;
+                font-family: font-medium;
+
+                @media (max-width: $lg) {
+                    font-size: 13px;
+                }
+            }
+
+            input {
+                padding: 13px 0 13px 14px;
+                border: none;
+                outline: none;
+                width: 100%;
+                background-color: $color-grey--3;
+                border-radius: 8px;
+
+                @media (max-width: $lg) {
+                    padding: 11px 0 11px 14px;
+                }
+
+                &::placeholder {
+                    color: $color-grey--2;
+                }
+
+                &:focus {
+                    border-right: 2px solid $color-green;
+                }
+            }
+        }
+
+        .problem-text {
+            font-size: 13px;
+            align-self: flex-end;
+            cursor: pointer;
+            color: $color-green--2;
+            margin: 2px 0;
+        }
+
+        .signUp-btn {
+            @include btn;
+            font-family: font-medium;
+
+            @media (max-width: $lg) {
+                padding: 10px 0;
+                font-size: 14px;
+            }
+
+
+            &:hover {
+               transform: scale(1.01);
+            }
+        }
+    }
+
+    .method-content {
+
+        .top-part {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 30px;
+            justify-content: center;
+
+            .line {
+                width: 28%;
+                background-color: $color-grey;
+                height: 1px;
+
+                @media (max-width: $sm) {
+                    width: 25%;
+                }
+            }
+
+            .text {
+                font-size: 14px;
+                font-family: font-regular;
+                color: $color-grey--2;
+                margin: 0 8px;
+            }
+        }
+
+        .facebook-option-btn {
+            @include btn;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: 2px solid $color-grey;
+            color: $color-black;
+
+            @media (max-width: $lg) {
+                padding: 6px 0;
+                font-size: 14px;
+            }
+
+            &:hover {
+                transform: scale(1.01);
+             }
+        }
+    }
+}

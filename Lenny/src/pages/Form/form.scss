@@ -1,0 +1,48 @@
+@import "../../assets/common-style/common.scss";
+
+@font-face {
+    font-family: font-regular;
+    font-weight: 400;
+    src: url("../../assets/fonts/ClashGrotesk_Regular.otf");
+}
+
+@font-face {
+    font-family: font-medium;
+    font-weight: 500;
+    src: url("../../assets/fonts/ClashGrotesk_Medium.otf");
+}
+
+@font-face {
+    font-family: font-bold;
+    font-weight: 600;
+    src: url("../../assets/fonts/ClashGrotesk_Bold.otf");
+}
+
+
+.login-register-content {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    display: none;
+    bottom: 0;
+    background-color: rgba(11, 15, 14, 0.502);
+    z-index: 90;
+
+
+    @media (max-width: 410px) {
+        width: auto;
+        height: auto;
+    }
+
+    @media (max-width: $ext-sm) {
+    }
+
+    &.active {
+        display: flex;
+    }
+}

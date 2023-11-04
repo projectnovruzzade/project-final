@@ -1,0 +1,26 @@
+@import "../../assets/common-style/common.scss";
+// ! HOME SCSS
+
+@font-face {
+    font-family: font-regular;
+    font-weight: 400;
+    src: url("../../assets/fonts/ClashGrotesk_Regular.otf");
+}
+
+@font-face {
+    font-family: font-medium;
+    font-weight: 500;
+    src: url("../../assets/fonts/ClashGrotesk_Medium.otf");
+}
+
+@font-face {
+    font-family: font-bold;
+    font-weight: 600;
+    src: url("../../assets/fonts/ClashGrotesk_Bold.otf");
+}
+
+#main-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: font-medium;
+}

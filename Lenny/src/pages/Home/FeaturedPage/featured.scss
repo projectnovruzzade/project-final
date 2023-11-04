@@ -1,0 +1,196 @@
+@import "../../../assets/common-style/common.scss";
+
+@font-face {
+    font-family: font-regular;
+    font-weight: 400;
+    src: url("../../../assets/fonts/ClashGrotesk_Regular.otf");
+}
+
+@font-face {
+    font-family: font-medium;
+    font-weight: 500;
+    src: url("../../../assets/fonts/ClashGrotesk_Medium.otf");
+}
+
+@font-face {
+    font-family: font-bold;
+    font-weight: 600;
+    src: url("../../../assets/fonts/ClashGrotesk_Bold.otf");
+}
+
+
+.featuredPage {
+    padding: 60px 80px;
+
+    @media (max-width: $lg) {
+        padding: 50px 30px;
+    }
+
+    @media (max-width: $sm) {
+        padding: 50px 5px;
+    }
+
+    @media (max-width: $ext-sm) {
+        padding: 60px 5px;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .category-title-part {
+            display: flex;
+            width: 89%;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+
+            .title-text {
+                font-family: font-bold;
+                font-size: 30px;
+                letter-spacing: 0.5px;
+
+                @media (max-width: $lg) {
+                    font-size: 23px;
+                }
+
+                @media (max-width: $sm) {
+                    font-size: 20px;
+                }
+
+                @media (max-width: $ext-sm) {
+                    font-size: 18px;
+                }
+            }
+
+            .view-detail-btn {
+                padding: 10px 14px;
+                cursor: pointer;
+                user-select: none;
+                border: 2px solid $color-green;
+                border-radius: 8px;
+                transition: .4s ease all;
+
+                a {
+                    color: $color-green;
+                    text-decoration: none;
+                }
+
+                @media (max-width: $lg) {
+                    padding: 9px 13px;
+                    font-size: 15px;
+                }
+
+                @media (max-width: $lg) {
+                    padding: 8px 10px;
+                    font-size: 14px;
+                }
+
+                @media (max-width: $ext-sm) {
+                    padding: 6px 8px;
+                    font-size: 13px;
+                }
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+        }
+
+        .category-box-group {
+            display: grid;
+            gap: 20px;
+            width: 90%;
+            overflow-x: scroll;
+            user-select: none;
+            padding-bottom: 40px;
+            grid-template-columns: repeat(12, 186px);
+            justify-content: flex-start;
+
+            &::-webkit-scrollbar {
+                padding: 30px;
+                height: 6px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $color-grey;
+                border-radius: 30px;
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: $color-green;
+                border-radius: 30px;
+            }
+
+            @media (max-width: 1280px) {
+                grid-template-columns: repeat(12, 180px);
+            }
+
+            @media (max-width: $lg) {
+                grid-template-columns: repeat(12, 160px);
+            }
+
+            @media (max-width: $sm) {
+                grid-template-columns: repeat(12, 170px);
+
+                &::-webkit-scrollbar {
+                    padding: 30px;
+                    height: 6px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: #fff;
+                    border-radius: 30px;
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #fff;
+                    border-radius: 30px;
+                }
+
+            }
+
+            @media (max-width: $ext-sm) {
+                grid-template-columns: repeat(12, 150px);
+            }
+
+            .category-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                border-radius: 8px;
+                text-align: center;
+                padding: 20px 10px;
+                border: 2px solid $color-grey;
+
+                @media (max-width: $lg) {
+                    padding: 15px 5px;
+                }
+
+                .category-name {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                    font-family: font-medium;
+
+                    a {
+                        color: $color-black;
+                        text-decoration: none;
+                    }
+                }
+
+                .category-counted {
+                    color: $color-grey--2;
+                    font-size: 13px;
+                    font-family: font-regular;
+
+                }
+
+            }
+        }
+    }
+}

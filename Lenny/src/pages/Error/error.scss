@@ -1,0 +1,18 @@
+@import "../../assets/common-style/common.scss";
+
+#error {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-family: font-bold;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    flex-direction: column;
+    letter-spacing: 1px;
+
+    h3 {
+        color: $color-green;
+        font-size: 1em;
+    }
+}

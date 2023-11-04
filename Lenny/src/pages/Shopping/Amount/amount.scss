@@ -1,0 +1,88 @@
+@import "../../../assets/common-style/common.scss";
+
+.amount-content {
+    .content-title {
+        font-size: 16px;
+        color: $color-black;
+        font-family: font-bold;
+        margin-bottom: 25px;
+    }
+
+    .products-group {
+        font-family: font-regular;
+        font-size: 15px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $color-grey;
+    }
+
+    .product-current-about {
+        margin-top: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $color-grey;
+
+        .box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            span {
+                font-size: 15px;
+                color: $color-grey--2;
+                font-family: font-regular;
+            }
+        }
+    }
+
+    .total-price {
+        margin-top: 30px;
+        display: flex;
+        margin-bottom: 14px;
+        align-items: center;
+        justify-content: space-between;
+
+        .total-common {
+            font-size: 17px;
+            font-family: font-bold;
+            color: $color-black;
+        }
+    }
+
+    .promo-content {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid $color-grey;
+        padding: 14px;
+        border-radius: 8px;
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            align-items: self-start;
+
+            .head-text {
+                font-size: 15px;
+                font-family: font-bold;
+            }
+
+            .secondary-text {
+                font-size: 14px;
+                color: $color-grey--2;
+                font-family: font-regular;
+            }
+        }
+    }
+
+    .checkout-btn {
+        background-color: $color-green;
+        width: 100%;
+        color: #fff;
+        padding: 13px 0;
+        margin-top: 40px;
+        border-radius: 8px;
+        text-align: center;
+    }
+}

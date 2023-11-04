@@ -1,0 +1,162 @@
+@import "../../../assets/common-style/common.scss";
+
+.comment-section {
+    display: flex;
+    margin-top: 40px;
+
+    .comment-wrapper {
+        width: 80%;
+        // background-color: red;
+        padding-left: 15px;
+
+        @media (max-width: $md) {
+            width: 100%;
+        }
+
+
+        .heading-part {
+
+            margin-bottom: 40px;
+            margin-top: 5px;
+
+            .heading-text {
+                color: $color-black;
+                font-size: 20px;
+                font-family: font-bold;
+                margin-bottom: 15px;
+            }
+
+            .btn-groups {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .btn {
+                    padding: 10px 15px;
+                    font-family: font-regular;
+                    font-size: 15px;
+                    border-radius: 8px;
+                    border: 1px solid $color-grey;
+
+                    @media (max-width: $sm) {
+                        font-size: 14px;
+                        padding: 8px 10px;
+                    }
+
+                    &.active {
+                        color: $color-green--2;
+                        border-color: $color-green--2;
+                    }
+                }
+            }
+        }
+
+        .comments-group {
+
+            .comment-box {
+                width: 100%;
+                margin-bottom: 25px;
+
+                .comment-data {
+                    border-bottom: 1px solid $color-grey;
+                    padding-bottom: 20px;
+
+                    .rating-group {
+                        display: flex;
+                        margin-bottom: 15px;
+                        gap: 7px;
+                        align-items: center;
+
+                        svg {
+                            transform: scale(1.2);
+                        }
+                    }
+
+                    .comment-title {
+                        color: $color-black;
+                        font-size: 19px;
+                        font-family: font-bold;
+                        margin-bottom: 7px;
+
+                        @media (max-width: $lg) {
+                            font-size: 17px;
+                        }
+                    }
+
+                    .comment-date {
+                        color: $color-grey--2;
+                        font-family: font-regular;
+                        font-size: 15px;
+                        letter-spacing: 1px;
+
+                        @media (max-width: $lg) {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .comment-user {
+                        display: flex;
+                        margin-top: 30px;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .user-profile {
+                            display: flex;
+                            gap: 7px;
+                            align-items: center;
+
+                            .profile-image {
+                                width: 32px;
+                                height: 32px;
+                                padding: 1px;
+                                // background-color: $color-grey;
+
+                                img {
+                                    border-radius: 50%;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+
+                            .user-name {
+                                @media (max-width: $lg) {
+                                    font-size: 15px;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .duration-comment {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+
+                        .btn {
+                            padding: 12px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 14px;
+                            font-family: font-regular;
+                            color: $color-black;
+                            gap: 5px;
+                            border: 1px solid $color-grey;
+                            border-radius: 8px;
+
+                            @media (max-width: $lg) {
+                                font-size: 13px;
+                                padding: 10px;
+
+                                svg {
+                                    transform: scale(0.9);
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
