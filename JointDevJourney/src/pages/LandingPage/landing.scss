@@ -1,0 +1,25 @@
+// ! Landing SCSS
+
+@font-face {
+  font-family: font-regular;
+  src: url("../../assets/fonts/ClashGrotesk_Regular.otf");
+}
+
+@font-face {
+  font-family: font-medium;
+  src: url("../../assets/fonts/ClashGrotesk_Medium.otf");
+}
+
+@font-face {
+  font-family: font-semibold;
+  src: url("../../assets/fonts/ClashGrotesk_Semibold.otf");
+}
+
+@font-face {
+  font-family: font-bold;
+  src: url("../../assets/fonts/ClashGrotesk_Bold.otf");
+}
+
+body {
+    font-family: font-medium;
+}

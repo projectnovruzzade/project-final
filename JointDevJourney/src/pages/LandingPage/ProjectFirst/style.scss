@@ -1,0 +1,327 @@
+// ! Project First SCSS
+@import "../../../assets/common-style/common-style.scss";
+
+.landing-first-section {
+    height: 100vh;
+    position: relative;
+  
+    .overlay-section {
+      width: 100%;
+      height: 105px;
+      background-color: $color-blue;
+      position: absolute;
+      bottom: 0;
+      clip-path: polygon(
+        100% 100%,
+        0% 100%,
+        0% 69.2%,
+        2% 67.88%,
+        4% 65.69%,
+        6% 62.7%,
+        8% 59.01%,
+        10% 54.77%,
+        12% 50.12%,
+        14% 45.23%,
+        16% 40.26%,
+        18% 35.39%,
+        20% 30.81%,
+        22% 26.66%,
+        24% 23.1%,
+        26% 20.25%,
+        28% 18.21%,
+        30% 17.06%,
+        32% 16.83%,
+        34% 17.54%,
+        36% 19.16%,
+        38% 21.63%,
+        40% 24.86%,
+        42% 28.74%,
+        44% 33.14%,
+        46% 37.89%,
+        48% 42.83%,
+        50% 47.78%,
+        52% 52.57%,
+        54% 57.03%,
+        56% 61%,
+        58% 64.34%,
+        60% 66.93%,
+        62% 68.68%,
+        64% 69.52%,
+        66% 69.44%,
+        68% 68.42%,
+        70% 66.51%,
+        72% 63.77%,
+        74% 60.31%,
+        76% 56.24%,
+        78% 51.71%,
+        80% 46.87%,
+        82% 41.91%,
+        84% 36.99%,
+        86% 32.29%,
+        88% 27.98%,
+        90% 24.21%,
+        92% 21.11%,
+        94% 18.79%,
+        96% 17.34%,
+        98% 16.8%,
+        100% 17.2%
+      );
+      right: 0;
+      left: 0;
+    }
+  
+    header {
+      display: flex;
+      padding: 5px 100px;
+      align-items: center;
+      justify-content: space-between;
+  
+      //ext media
+      @media (max-width: 1100px) {
+        padding: 5px 80px;
+      }
+  
+      // 991px media
+      @media (max-width: $md) {
+        padding: 5px 40px;
+      }
+  
+       // 500px media
+      @media (max-width: $sm) {
+        padding: 5px 20px;
+      }
+  
+      .logo-part {
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+        justify-content: center;
+        gap: 5px;
+  
+        .text-content {
+          font-size: 26px;
+          letter-spacing: 1px;
+          margin-right: 5px;
+  
+          @media (max-width: $lg) {
+            font-size: 24px;
+          }
+  
+          
+          // 768px media
+          @media (max-width: $md-ext) {
+            font-size: 22px;
+          }
+          // ext media
+          @media (max-width: 700px) {
+            display: none;
+          }
+  
+          span {
+            color: $color-blue;
+          }
+        }
+  
+        .logo {
+          cursor: pointer;
+  
+          &:hover {
+            transition: 0.3s ease-in-out all !important;
+            transform: scale(1.02) rotate(5deg) !important;
+          }
+  
+          @media (max-width: $md) {
+            // 991px media
+            width: 55px;
+          }
+  
+          @media (max-width: $sm) {
+            width: 53px
+          }
+          
+          @media (max-width: $sm) {
+            width: 50px;
+          }
+        }
+      }
+  
+      .nav-part {
+        margin-top: 20px;
+  
+        nav {
+          display: flex;
+          gap: 15px;
+  
+          a {
+            // background-color: $color-red;
+            // border: 1px solid $color-black;
+            padding: 5px 5px;
+            font-size: 15px;
+            color: $color-black;
+            font-family: font-medium;
+            letter-spacing: 0.3px;
+            display: block;
+  
+            @media (max-width: $md) {
+              // 991px media
+              font-size: 14px;
+              letter-spacing: 0.5px;
+            }
+  
+            &::after {
+              content: "";
+              margin: auto;
+              margin-top: 7px;
+              margin-left: auto;
+              display: inline-block;
+              height: 2px;
+              width: 30%;
+              transition: 0.8s all;
+              background-color: $color-blue;
+            }
+  
+            &:hover::after {
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  
+    .main-wrapper {
+      padding: 40px 100px;
+      margin-top: 100px;
+  
+      @media (max-width: 1100px) {
+        //ext media
+        padding: 5px 80px;
+      }
+  
+      @media (max-width: $md) {
+        // 991px media
+        padding: 5px 50px;
+      }
+  
+      @media (max-width: 830px) {
+        padding: 5px 40px;
+      }
+  
+      @media (max-width: $sm) {
+        padding: 5px 20px;
+        margin-top: 80px;
+      }
+  
+       // 500px media
+      @media (max-width: $sm) {
+        padding: 5px 20px;
+      }
+  
+      .wrapper-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        @media (max-width: $md-ext) {
+          // 768px media
+          flex-direction: column;
+        }
+  
+        .text__part {
+          width: 51%;
+  
+          // 991px media
+          @media (max-width: $md) {
+            width: 47%;
+          }
+  
+          @media (max-width: 830px) {
+            width: 50%;
+          }
+  
+          // 768px media
+          @media (max-width: $md-ext) {
+            width: 90%;
+            text-align: center;
+          }
+  
+          @media (max-width: $sm) {
+            width: 100%;
+          }
+  
+          .main_text {
+            font-size: 35px;
+            font-family: font-semibold;
+            letter-spacing: 1px;
+  
+            // 991px media
+            @media (max-width: $md) {
+              font-size: 32px;
+            }
+  
+            // 768px media
+            @media (max-width: $md-ext) {
+              font-size: 30px;
+            }
+            // 500px media
+            @media (max-width: $sm) {
+              font-size: 28px;
+            }
+  
+            @media (max-width: 450px) {
+              font-size: 25px;
+            }
+          }
+  
+          .secondary_text {
+            font-size: 20px;
+            color: #818b9c;
+            margin-top: 10px;
+            font-family: font-regular;
+  
+            @media (max-width: $md) {
+              // 991px media
+              font-size: 19px;
+            }
+  
+            // 500px media
+            @media (max-width: $sm) {
+              font-size: 17px;
+            }
+  
+            @media (max-width: 450px) {
+              font-size: 15px;
+              width: 80%;
+              margin: 0 auto;
+              margin-top: 14px;
+              text-align: center;
+            }
+          }
+        }
+  
+        .image__part {
+          width: 43%;
+          height: 450px;
+  
+          // 768px media
+          @media (max-width: $md-ext) {
+            width: 65%;
+          }
+  
+          // ext media
+          @media (max-width: 700px) {
+            height: 350px;
+          }
+  
+          @media (max-width: $sm) {
+            width: 70%;
+          }
+  
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+}
+  
